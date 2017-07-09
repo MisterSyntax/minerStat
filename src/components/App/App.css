@@ -1,0 +1,7 @@
+/**Import global variables using import**/
+@import url('../../cssGlobals/colors.css');
+
+/**use global variables like below**/
+body{
+    color: var(--primary-color);
+}

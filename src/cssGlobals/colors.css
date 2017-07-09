@@ -1,0 +1,5 @@
+/**Can define global colors to import into components**/
+:root {
+  /**also used for flyouts**/
+  --primary-color: #D99006;
+}
