@@ -15,9 +15,7 @@ export const enableContent = () => {
 }
 
 export const disableContent = () => {
-
     return {
         type: C.DISABLE
     }
-
 }

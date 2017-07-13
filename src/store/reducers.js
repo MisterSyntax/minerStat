@@ -19,5 +19,5 @@ export const enable = (state = false, action) => {
 }
 
 export default combineReducers({
-    action
+    enable
 })
