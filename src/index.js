@@ -22,11 +22,11 @@ const store = storeFactory(initialState)
 store.subscribe(saveState)
 
 //For debuggin we expose the store
-window.store
+window.store = store
 
 //Renders your app
 render(
-    <Provider>
+    <Provider store={store}>
         <App/>
     </Provider>
 , document.getElementById('react-container'))

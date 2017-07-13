@@ -14,7 +14,7 @@ import { enableContent, disableContent } from '../../actions'
 
 const mapStateToProps = (state, props) => (
     {
-        enableView: state.enabled
+        enable: state.enable
     }
 )
 
@@ -22,12 +22,12 @@ const mapDispatchToProps = dispatch => {
     return{
         onEnableContent(){
             dispatch(
-                enable()
+                enableContent()
             )
         },
         onDisableContent(){
             dispatch(
-                disable()
+                disableContent()
             )
         }
     }

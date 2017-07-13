@@ -8,12 +8,16 @@ import { combineReducers } from 'redux'
 
 //TODO: Remove/Replace Sample reducer
 export const enable = (state = false, action) => {
+    console.log(state)
     switch (action.type) {
         case C.ENABLE: {
             return true
         }
         case C.DISABLE: {
             return false
+        }
+        default:{
+            return state
         }
     }
 }
