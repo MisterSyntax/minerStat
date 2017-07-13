@@ -1,7 +1,7 @@
-A basic react setup with css next and css import
+A basic react setup with css next and css import, and redux
 ---
  
-Welcome. This starter is for getting you right into building your react app. With this starter you can use react, es6 features, cssnext features, and you'll have the ability to import css files into react components, to help keep your code organized.
+Welcome. This starter is for getting you right into building your react app. With this starter you can use react, es6 features, cssnext features, redux and you'll have the ability to import css files into react components, to help keep your code organized.
  
  
  
