@@ -1,6 +1,32 @@
+//React dependencies
 import React from 'react'
 import { render } from 'react-dom'
 
+//Redux dependencies
+import { Provider } from 'react-redux'
+import storeFactory from './store/'
+
+//sampleData
+import sampleData from './initialState.json'
+
+//Import Main Component
 import App from './components/App/'
 
-render(<App/>, document.getElementById('react-container'))
+//Setting up load data and save state
+const initialState = (localStorage['app-store']) ? JSON.parse(localStorage['app-store']) : sampleData
+
+const saveState = () => 
+    localStorage['app-store'] = JSON.stringify(store.getState())
+
+const store = storeFactory(initialState)
+store.subscribe(saveState)
+
+//For debuggin we expose the store
+window.store
+
+//Renders your app
+render(
+    <Provider>
+        <App/>
+    </Provider>
+, document.getElementById('react-container'))
