@@ -1,6 +1,6 @@
 /**
  * @desc: Manage every key in the initialState.json file
- * @return: A combined reducer that has the 
+ * @return: A combined reducer that has the same structure as the initialState
  */
 
 import C from '../constants.js'
