@@ -1,6 +1,3 @@
-/**
-*@desc: Sample data for populating the initial state of the app
-**/
 {
-    "enable" : false
+    "enable" : false, 
 }
