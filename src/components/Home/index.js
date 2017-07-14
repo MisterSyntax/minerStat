@@ -6,7 +6,7 @@ export default class Home extends React.Component {
         this.toggleContent = this.toggleContent.bind(this)
     }
     toggleContent(viewState) {
-        viewState ? this.props.onEnableContent() : this.props.onDisableContent()
+        viewState ? this.props.onDisableContent() : this.props.onEnableContent()
     }
     render() {
         return (
