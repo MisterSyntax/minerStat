@@ -8,11 +8,11 @@ module.exports = {
     output: {
         path: path.join(__dirname, './dist/assets'),
         filename: 'bundle.js',
-        publicPath: "assets"
+        publicPath: 'assets'
     },
     devServer: {
         inline: true,
-        contentBase: path.join(__dirname, "./dist"),
+        contentBase: path.join(__dirname, './dist'),
         historyApiFallback: {
             index: 'index.html'
         },
@@ -25,9 +25,9 @@ module.exports = {
                 exclude: /(node_modules)/,
                 use: [
                     {
-                        loader: "babel-loader",
+                        loader: 'babel-loader',
                         options: {
-                            presets: ["latest", "stage-0", "react"]
+                            presets: ['react']
                         }
                     }
                 ]
@@ -35,9 +35,9 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    { loader: "style-loader" },
+                    { loader: 'style-loader' },
                     { loader: 'css-loader', options: { importLoaders: 1 } },
-                    { loader: "postcss-loader" }
+                    { loader: 'postcss-loader' }
                 ]
             }
         ],

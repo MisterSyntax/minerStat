@@ -10,13 +10,13 @@ import { combineReducers } from 'redux'
 export const enable = (state = false, action) => {
     switch (action.type) {
         case C.ENABLE: {
-            return true
+            return true;
         }
         case C.DISABLE: {
-            return false
+            return false;
         }
         default:{
-            return state
+            return state;
         }
     }
 }

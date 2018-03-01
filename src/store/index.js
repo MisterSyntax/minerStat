@@ -5,35 +5,21 @@
  */
 
 import C from '../constants'
-import appReducer from './reducers'
+import appReducer from './reducers';
 
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 
 /**
  * @description - Middlewear to show us the state of the App before/after actions
  */
 const storeUpdateInfo = (store) => (next) => (action) => {
+    let result;
+    result = next(action);
 
-    let result
-
-    console.groupCollapsed(`dispatching action => ${action.type}`)
-    console.log('before')
-    console.log(store.getState())
-
-    result = next(action)
-
-    console.log('after')
-    console.log(store.getState())
-
-    console.groupEnd()
-
-    return result
-
+    return result;
 }
 
 export default (initialState={}) => {
     return applyMiddleware(thunk, storeUpdateInfo)(createStore)(appReducer,initialState);
 };
-
-

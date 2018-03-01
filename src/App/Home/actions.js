@@ -6,7 +6,7 @@
  *      -fetching data
  * @TODO: remove default enable/disable
  */
-import C from "./constants"
+import C from "../../constants"
 
 export const enableContent = () => {
     return {
