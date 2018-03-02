@@ -19,7 +19,6 @@ const reducers = combineReducers({
     apiData
 });
 
-
 const store = createStore(mainReducer, initialState);
 store.subscribe(saveState);
 //For debugging purposes we expose the store
