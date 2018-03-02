@@ -1,14 +1,15 @@
-export const ENABLE = 'ENABLE';
-export const DISABLE = 'DISABLE';
+export const LOAD_PAYMENTS = 'LOAD_PAYMENTS';
+export const LOAD_PAYMENTS_SUCCESS = 'LOAD_PAYMENTS_SUCCESS';
+export const LOAD_PAYMENTS_FAIL = 'LOAD_PAYMENTS_FAIL';
 
-export const enableContent = () => {
-    return {
-        type: ENABLE
-    }
-}
+export const loadPayments = () => ({
+    type: LOAD_PAYMENTS
+});
 
-export const disableContent = () => {
-    return {
-        type: DISABLE
-    }
-}
+export const loadPaymentsSuccess = () => ({
+    type: LOAD_PAYMENTS_SUCCESS
+});
+
+export const LOAD_PAYMENTS_FAIL = () => ({
+    type: LOAD_PAYMENTS_FAIL
+})

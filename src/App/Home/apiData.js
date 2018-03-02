@@ -1,18 +1,40 @@
 import {
-   ENABLE,
-   DISABLE,
+   LOAD_PAYMENTS,
+   LOAD_PAYMENTS_SUCCESS,
+   LOAD_PAYMENTS_FAIL,
 } from './actions.js';
 import { combineReducers } from 'redux';
 
+
+
 //TODO: Remove/Replace Sample reducer
-export const enable = (state = false, action) => {
+export const minerDataReducer = (state = {}, action) => {
     switch (action.type) {
-        case C.ENABLE: {
-            return true;
+        case LOAD_PAYMENTS: {
+            return {
+                ...state,
+                loaded: false,
+                loading: true,
+                paymentdata: action.result,
+            }
         }
-        case C.DISABLE: {
-            return false;
+
+        case LOAD_PAYMENTS_SUCCESS: {
+            return {
+                ...state,
+                loaded: true,
+                loading: false,
+            }
         }
+
+        case LOAD_PAYMENTS_FAIL: {
+            return {
+                ...state,
+                loaded: true,
+                loadingL false,
+            }
+        }
+
         default: {
             return state;
         }
