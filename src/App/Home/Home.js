@@ -12,12 +12,12 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <div id="main">
+            <main>
                 <button onClick={()=>this.toggleContent(this.props.enable)}>Toggle</button>
                 <div style={{display:this.props.enable?"block":"none"}}>
                     Content
                 </div>
-            </div>
+            </main>
         );
     }
 }
