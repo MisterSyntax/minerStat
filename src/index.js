@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { comnineReducers, createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import apiData from './App/apiData';
 // if we need middleware we'll use a storeFactory
 // import storeFactory from './store/';
@@ -15,7 +15,7 @@ const initialState = (localStorage['app-store']) ? JSON.parse(localStorage['app-
 const saveState = () =>
     localStorage['app-store'] = JSON.stringify(store.getState());
 
-const reducers = combineReducers({
+const mainReducer = combineReducers({
     apiData
 });
 

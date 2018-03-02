@@ -41,4 +41,4 @@ export const minerDataReducer = (state = {}, action) => {
     }
 };
 
-export default enable;
+export default minerDataReducer;
