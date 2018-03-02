@@ -31,7 +31,7 @@ export const minerDataReducer = (state = {}, action) => {
             return {
                 ...state,
                 loaded: true,
-                loadingL false,
+                loading: false,
             }
         }
 

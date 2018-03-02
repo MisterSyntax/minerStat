@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { comnineReducers, createStore } from 'redux';
-import  from './store/reducers';
+import apiData from './App/apiData';
 // if we need middleware we'll use a storeFactory
 // import storeFactory from './store/';
 import sampleData from './initialState.json';

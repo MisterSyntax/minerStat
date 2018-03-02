@@ -10,6 +10,6 @@ export const loadPaymentsSuccess = () => ({
     type: LOAD_PAYMENTS_SUCCESS
 });
 
-export const LOAD_PAYMENTS_FAIL = () => ({
+export const loadPaymentsFail = () => ({
     type: LOAD_PAYMENTS_FAIL
 })

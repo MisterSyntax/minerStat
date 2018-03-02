@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
+import { styles } from './App.css';
 
-import Home from './Home/Home';
+// import Home from './Home/Home';
 
 const App = () => (
     <div id="app">
-        <p class="tester"> Test </p>
-        <Home />
+        <p class={styles[tester]}> Test </p>
     </div>
 );
 
