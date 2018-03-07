@@ -27,7 +27,8 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['react']
+                            presets: ['react', 'env'],
+                            plugins: ['transform-es2015-spread', 'transform-object-rest-spread'],
                         }
                     }
                 ]
@@ -36,7 +37,14 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     { loader: 'style-loader' },
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    { loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 2,
+                            sourceMap: true,
+                            localIdentName: '[local]___[hash:base64:5]'
+                        }
+                    },
                     { loader: 'postcss-loader' }
                 ]
             }

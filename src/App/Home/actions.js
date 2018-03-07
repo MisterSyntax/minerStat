@@ -1,21 +1,15 @@
-/**
- * @desc: This file holds the action creators which dispatch actions, and non-reducer functions(e.g.)
- *      -generates unique ids
- *      -reading writing data to a persistance layer
- *      -mutate global state/vars
- *      -fetching data
- * @TODO: remove default enable/disable
- */
-import C from "../../constants"
+export const LOAD_PAYMENTS = 'LOAD_PAYMENTS';
+export const LOAD_PAYMENTS_SUCCESS = 'LOAD_PAYMENTS_SUCCESS';
+export const LOAD_PAYMENTS_FAIL = 'LOAD_PAYMENTS_FAIL';
 
-export const enableContent = () => {
-    return {
-        type: C.ENABLE
-    }
-}
+export const loadPayments = () => ({
+    type: LOAD_PAYMENTS
+});
 
-export const disableContent = () => {
-    return {
-        type: C.DISABLE
-    }
-}
+export const loadPaymentsSuccess = () => ({
+    type: LOAD_PAYMENTS_SUCCESS
+});
+
+export const loadPaymentsFail = () => ({
+    type: LOAD_PAYMENTS_FAIL
+})

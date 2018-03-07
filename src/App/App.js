@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
+import styles from './App.css';
+// import Home from './Home/Home';
 
-import Home from './Home/Home';
+const App = () => {
+    console.log('sy', styles);
 
-const App = () => (
-    <div id="app">
-        <p class="tester"> Test </p>
-        <Home />
-    </div>
-);
+    return (
+        <div id="app">
+            <p className={styles.tester}> Test </p>
+        </div>
+    );
+};
 
 export default App;
