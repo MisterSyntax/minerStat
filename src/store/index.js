@@ -14,6 +14,7 @@ import thunk from 'redux-thunk'
  * @description - Middlewear to show us the state of the App before/after actions
  */
 const storeUpdateInfo = (store) => (next) => (action) => {
+    console.log('store', store);
     let result;
     result = next(action);
 
