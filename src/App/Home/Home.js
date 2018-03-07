@@ -4,7 +4,7 @@ import { enableContent, disableContent } from './actions';
 
 class Home extends React.Component {
     constructor(props){
-        super(props);
+        super(props)
         this.toggleContent = this.toggleContent.bind(this)
     }
     toggleContent(viewState) {
