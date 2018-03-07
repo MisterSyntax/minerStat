@@ -3,7 +3,8 @@
         "node": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended",
+    "plugin:react/recommended"],
     "parserOptions": {
         "sourceType": "module"
     },
@@ -11,11 +12,11 @@
     "rules": {
         "indent": [
             "error",
-            "spaces"
+            4
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "quotes": [
             "error",
@@ -25,5 +26,10 @@
             "error",
             "always"
         ]
-    }
+    },
+    "plugins": [
+        "import",
+        "jest",
+        "react"
+    ]
 }
