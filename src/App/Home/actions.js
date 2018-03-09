@@ -12,4 +12,4 @@ export const loadPaymentsSuccess = () => ({
 
 export const loadPaymentsFail = () => ({
     type: LOAD_PAYMENTS_FAIL
-})
+});

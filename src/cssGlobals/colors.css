@@ -2,4 +2,9 @@
 :root {
   /**also used for flyouts**/
   --primary-color: #D99006;
+  --primary-background: #2D2D2D;
+  --header-color: #FFFFFF;
+  --blue-background: #7590BB;
+  --orange-background: #E1A25F;
+  --black-color: #000000;
 }

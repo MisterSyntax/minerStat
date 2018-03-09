@@ -1,28 +1,29 @@
 import React from 'react';
-import { workerStats } from '../../../test/workerStats'
+import styles from './WorkerStats.css';
 
 export const WorkerStats = () => {
-    const { mature, immature, totalHash, totalShares, paid } = workerStats
-    const miner = workerStats.miner.split('=')
     return (
         <div>
-            <div>
-                Miner: {miner[1]}
+            <div className={styles.minerStatsTop}>
+            {/* these will probably be components with props passed in or something */}
+                <div className={styles.minerInfo}>
+                    Miner Info
+                </div>
+                <div className={styles.minerInfo}>
+                    Balance
+                </div>
+                <div className={styles.minerInfo}>
+                    Pool Information
+                </div>
             </div>
-            <div>
-                Total Hash: {totalHash}
-            </div>
-            <div>
-                Total Shares: {totalShares}
-            </div>
-            <div>
-                Mature: {mature}
-            </div>
-            <div>
-                Immature: {immature}
-            </div>
-            <div>
-                Total Paid: {paid}
+            <div className={styles.minerStatsBottom}>
+                <div className={styles.transactions}>
+                    Transactions
+                </div>
+                <div className={styles.payouts}>
+                    Payouts
+                </div>
             </div>
         </div>
-)};
+    );
+};
