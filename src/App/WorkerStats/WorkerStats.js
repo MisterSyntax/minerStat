@@ -2,8 +2,9 @@ import React from 'react';
 import { workerStats } from '../../../test/workerStats'
 
 export const WorkerStats = () => {
-    const { mature, immature, totalHash, totalShares, paid } = workerStats
-    const miner = workerStats.miner.split('=')
+    const { mature, immature, totalHash, totalShares, paid } = workerStats;
+    const miner = workerStats.miner.split('=');
+    
     return (
         <div>
             <div>
@@ -25,4 +26,5 @@ export const WorkerStats = () => {
                 Total Paid: {paid}
             </div>
         </div>
-)};
+    );
+};

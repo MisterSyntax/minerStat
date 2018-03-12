@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { enableContent, disableContent } from './actions';
+import { fetchRavenPayments } from './actions';
 import { WorkerStats } from '../WorkerStats/WorkerStats';
 
 class Home extends React.Component {
     componentWillMount(){
-        console.log('fff');
+        this.props.onFetchRavenPayments('123');
     }
     render() {
         return (
@@ -18,13 +18,12 @@ class Home extends React.Component {
 
 const mapStateToProps = (state) => (
     {
-        enable: state.enable,
+        walletId: state.walletId
     }
 );
 
 const mapDispatchToProps = {
-    enableContent,
-    disableContent,
+    onFetchRavenPayments: walletId => fetchRavenPayments(walletId)
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
