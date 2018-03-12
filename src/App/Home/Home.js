@@ -5,7 +5,7 @@ import { WorkerStats } from '../WorkerStats/WorkerStats';
 
 class Home extends React.Component {
     componentWillMount(){
-        fetchRavenPayments();
+        this.props.onFetchRavenPayments('123');
     }
     render() {
         return (
@@ -22,10 +22,8 @@ const mapStateToProps = (state) => (
     }
 );
 
-function mapDispatchToProps(dispatch) {
-    return {
-        fetchRavenPayments: () => dispatch(fetchRavenPayments)
-    };
-}
+const mapDispatchToProps = {
+    onFetchRavenPayments: walletId => fetchRavenPayments(walletId)
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

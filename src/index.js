@@ -17,18 +17,14 @@ const saveState = () =>
 const mainReducer = combineReducers({
     apiData
 });
-console.log(thunk);
+
 const store = createStore(
     mainReducer,
-    // initialState,
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(thunk)
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk),
 );
+
 store.subscribe(saveState);
-//For debugging purposes we expose the store
-window.store = store;
-
-
 
 //Renders your app, wrapped in a provider, for hooking up your store to the app
 render(

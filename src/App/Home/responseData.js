@@ -11,7 +11,6 @@ export const minerData = (state = {}, action) => {
             ...state,
             loaded: false,
             loading: true,
-            paymentdata: action.result,
         };
     }
     case LOAD_RAVEN_PAYMENTS_SUCCESS: {
@@ -19,6 +18,7 @@ export const minerData = (state = {}, action) => {
             ...state,
             loaded: true,
             loading: false,
+            paymentData: action.data,
         };
     }
     case LOAD_RAVEN_PAYMENTS_FAIL: {

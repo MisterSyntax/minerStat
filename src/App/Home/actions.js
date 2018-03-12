@@ -3,12 +3,9 @@ export const LOAD_RAVEN_PAYMENTS_SUCCESS = 'LOAD_RAVEN_PAYMENTS_SUCCESS';
 export const LOAD_RAVEN_PAYMENTS_FAIL = 'LOAD_RAVEN_PAYMENTS_FAIL';
 
 export const fetchRavenPayments = (walletId = 'RLTCoLEnrDwwupR3pSgKWy7NJ9E1t9TYC3') => {
-    console.log('asdf');
+    return function (dispatch) {
+        dispatch(loadRavenPayments());
 
-    return dispatch => {
-        console.log('ASSSassdfsdf');
-
-        dispatch(loadRavenPayments);
         return fetch(`http://mine.threeeyed.info/api/payments?${walletId}`)
           .then(response => response.json())
           .then(data => {
@@ -19,16 +16,17 @@ export const fetchRavenPayments = (walletId = 'RLTCoLEnrDwwupR3pSgKWy7NJ9E1t9TYC
 };
 
 export const loadRavenPayments = () => {
-    console.log('fffff');
     return ({
         type: LOAD_RAVEN_PAYMENTS
     });
 };
 
-export const loadRavenPaymentsSuccess = data => ({
-    type: LOAD_RAVEN_PAYMENTS_SUCCESS,
-    data
-});
+export const loadRavenPaymentsSuccess = data => {
+    return ({
+        type: LOAD_RAVEN_PAYMENTS_SUCCESS,
+        data
+    });
+};
 
 export const loadRavenPaymentsFail = error => ({
     type: LOAD_RAVEN_PAYMENTS_FAIL,
