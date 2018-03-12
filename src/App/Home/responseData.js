@@ -1,12 +1,12 @@
 import {
-   LOAD_PAYMENTS,
-   LOAD_PAYMENTS_SUCCESS,
-   LOAD_PAYMENTS_FAIL,
+   LOAD_RAVEN_PAYMENTS,
+   LOAD_RAVEN_PAYMENTS_SUCCESS,
+   LOAD_RAVEN_PAYMENTS_FAIL,
 } from './actions.js';
 
-export const minerDataReducer = (state = {}, action) => {
+export const minerData = (state = {}, action) => {
     switch (action.type) {
-    case LOAD_PAYMENTS: {
+    case LOAD_RAVEN_PAYMENTS: {
         return {
             ...state,
             loaded: false,
@@ -14,20 +14,19 @@ export const minerDataReducer = (state = {}, action) => {
             paymentdata: action.result,
         };
     }
-
-    case LOAD_PAYMENTS_SUCCESS: {
+    case LOAD_RAVEN_PAYMENTS_SUCCESS: {
         return {
             ...state,
             loaded: true,
             loading: false,
         };
     }
-
-    case LOAD_PAYMENTS_FAIL: {
+    case LOAD_RAVEN_PAYMENTS_FAIL: {
         return {
             ...state,
             loaded: true,
             loading: false,
+            error: action.error
         };
     }
 
@@ -37,4 +36,4 @@ export const minerDataReducer = (state = {}, action) => {
     }
 };
 
-export default minerDataReducer;
+export default minerData;
