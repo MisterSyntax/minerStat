@@ -3,7 +3,7 @@ import styles from './App.css';
 import Home from './Home/Home';
 
 const App = () => {
-    console.log('sy', styles);
+
 
     return (
         <div id="app">

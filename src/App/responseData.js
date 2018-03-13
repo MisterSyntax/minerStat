@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { minerDataReducer } from './Home/apiData';
+import { minerData } from './Home/responseData';
 
 export default combineReducers({
-    minerDataReducer
+    minerData
 });
