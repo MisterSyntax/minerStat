@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { minerData } from './Home/responseData';
+import { payemntDataReducer } from './Home/Payments/responseData';
 
 export default combineReducers({
-    minerData
+    payments: payemntDataReducer
 });

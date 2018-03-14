@@ -3,8 +3,10 @@ import {
    LOAD_RAVEN_PAYMENTS_SUCCESS,
    LOAD_RAVEN_PAYMENTS_FAIL,
 } from './actions.js';
+import { createSelector } from 'reselect';
+import deep from 'deep-get-set';
 
-export const minerData = (state = {}, action) => {
+export const payemntDataReducer = (state = {}, action) => {
     switch (action.type) {
     case LOAD_RAVEN_PAYMENTS: {
         return {
@@ -36,4 +38,12 @@ export const minerData = (state = {}, action) => {
     }
 };
 
-export default minerData;
+export const getPaymentData = createSelector(
+    state => state,
+    state => deep(state, 'responseData.payments.paymentData') || {}
+);
+
+export const getPayments  = createSelector(
+    state => state,
+    state => deep(state, 'responseData.payments.paymentData.payments') || []
+);
