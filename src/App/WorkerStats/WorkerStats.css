@@ -28,7 +28,7 @@ body{
 }
 
 .transactions {
-    width: 60%;
+    width: calc(60% - 20px);
     margin: 10px;
     background-color: var(--orange-background);
     height: 500px;
@@ -37,7 +37,7 @@ body{
 }
 
 .payouts {
-    width: 35%;
+    width: calc(40% - 20px);
     margin: 10px;
     background-color: var(--orange-background);
     height: 500px;
