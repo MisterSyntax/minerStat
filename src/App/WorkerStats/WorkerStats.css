@@ -20,7 +20,7 @@ body{
 
 .minerInfo {
     color: var(--header-color);
-    background-color: var(--blue-background);
+    background-color: var(--orange-background);
     height: 150px;
     width: 33%;
     margin: 10px;

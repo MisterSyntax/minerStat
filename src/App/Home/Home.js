@@ -7,20 +7,14 @@ import { WorkerInput } from '../WorkerInput/WorkerInput';
 
 class Home extends React.Component {
     componentWillMount(){
-        this.props.onFetchRavenPayments('123');
+        this.props.onFetchRavenPayments();
     }
     render() {
-        const showWorkerStats = true;
-        const showWorkerInput = false;
         return (
             <main>
                 <NavBar />
-                {showWorkerInput &&
-                    <WorkerInput />
-                }
-                {showWorkerStats &&
-                    <WorkerStats />
-                }
+                <WorkerInput />
+                <WorkerStats />
             </main>
         );
     }

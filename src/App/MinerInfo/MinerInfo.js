@@ -10,6 +10,9 @@ export const MinerInfo = (props) => {
             <div>
                 {title}
             </div>
+            <div>
+                map over all the data passed in.
+            </div>
         </div>
     );
 };

@@ -1,36 +1,38 @@
 import React from 'react';
 import styles from './WorkerStats.css';
 import MinerInfo from '../MinerInfo/MinerInfo';
+import Balance from '../Balance/Balance';
+import PoolInfo from '../PoolInfo/PoolInfo';
+import Transactions from '../Transactions/Transactions';
+import Payouts from '../Payouts/Payouts';
 
 export const WorkerStats = () => {
-    const minerData= {
-        'Total Miners': 1234,
-        'Hashrate': 2345,
-        'Accepted': 3456,
-        'Rejected': 4567
-    };
+    // if(!showWorkerStats) {
+    //     return null;
+    // }
     return (
         <div>
             <div className={styles.minerStatsTop}>
-            {/* these will probably be components with props passed in or something */}
                 <div className={styles.minerInfo}>
-                    <MinerInfo title='Miner Information' data={minerData} />
+                    <MinerInfo />
                 </div>
                 <div className={styles.minerInfo}>
-                    <MinerInfo title='Balance' />
+                    <Balance />
                 </div>
                 <div className={styles.minerInfo}>
-                    <MinerInfo title='Pool Information' />
+                    <PoolInfo />
                 </div>
             </div>
             <div className={styles.minerStatsBottom}>
                 <div className={styles.transactions}>
-                    Transactions
+                    <Transactions />
                 </div>
                 <div className={styles.payouts}>
-                    Payouts
+                    <Payouts />
                 </div>
             </div>
         </div>
     );
 };
+
+export default WorkerStats;
