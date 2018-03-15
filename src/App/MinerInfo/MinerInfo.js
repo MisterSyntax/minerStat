@@ -2,17 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MinerInfo.css';
 
-export const MinerInfo = (props) => {
-    const title = props.title;
-    const data = props.data;
+export const MinerInfo = () => {
     return (
-        <div>
-            <div>
-                {title}
-            </div>
-            <div>
-                map over all the data passed in.
-            </div>
+        <div className={styles.minerinfo}>
+            Miner Information
         </div>
     );
 };
