@@ -10164,3 +10164,5 @@ export const poolStats = [
         }
     }
 ]
+
+export default poolStats;
