@@ -1,30 +1,38 @@
 import React from 'react';
-import { workerStats } from '../../../test/workerStats'
+import styles from './WorkerStats.css';
+import MinerInfo from '../MinerInfo/MinerInfo';
+import Balance from '../Balance/Balance';
+import PoolInfo from '../PoolInfo/PoolInfo';
+import Transactions from '../Transactions/Transactions';
+import Payouts from '../Payouts/Payouts';
 
 export const WorkerStats = () => {
-    const { mature, immature, totalHash, totalShares, paid } = workerStats;
-    const miner = workerStats.miner.split('=');
-    
+    // if(!showWorkerStats) {
+    //     return null;
+    // }
     return (
         <div>
-            <div>
-                Miner: {miner[1]}
+            <div className={styles.minerStatsTop}>
+                <div className={styles.minerInfo}>
+                    <MinerInfo />
+                </div>
+                <div className={styles.minerInfo}>
+                    <Balance />
+                </div>
+                <div className={styles.minerInfo}>
+                    <PoolInfo />
+                </div>
             </div>
-            <div>
-                Total Hash: {totalHash}
-            </div>
-            <div>
-                Total Shares: {totalShares}
-            </div>
-            <div>
-                Mature: {mature}
-            </div>
-            <div>
-                Immature: {immature}
-            </div>
-            <div>
-                Total Paid: {paid}
+            <div className={styles.minerStatsBottom}>
+                <div className={styles.transactions}>
+                    <Transactions />
+                </div>
+                <div className={styles.payouts}>
+                    <Payouts />
+                </div>
             </div>
         </div>
     );
 };
+
+export default WorkerStats;

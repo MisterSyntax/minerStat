@@ -1,10 +1,15 @@
 import React from 'react';
-import Payments from './Payments/Payments';
+import { WorkerStats } from '../WorkerStats/WorkerStats';
+import { NavBar } from '../NavBar/NavBar';
+import { WorkerInput } from '../WorkerInput/WorkerInput';
 
 const Home = () => (
     <main>
-        <Payments />
+        <NavBar />
+        <WorkerInput />
+        <WorkerStats />
     </main>
 );
+
 
 export default Home;

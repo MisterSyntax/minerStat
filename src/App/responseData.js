@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { payemntDataReducer } from './Home/Payments/responseData';
+import { payemntDataReducer } from './apiRequests/responseData';
 
 export default combineReducers({
     payments: payemntDataReducer

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { combineReducers, applyMiddleware, createStore } from 'redux';
 import responseData from './App/responseData';
+import userData from './App/userData';
 import viewState from './App/viewState';
 // if we need middleware we'll use a storeFactory
 // import storeFactory from './store/';
@@ -17,6 +18,7 @@ const saveState = () =>
 
 const mainReducer = combineReducers({
     responseData,
+    userData,
 });
 
 const store = createStore(

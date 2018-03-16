@@ -7,7 +7,7 @@ import { getPaymentData, getPayments } from './responseData';
 class Payments extends React.Component {
 
     componentWillMount(){
-        this.props.onFetchRavenPayments('123');
+        this.props.onFetchRavenPayments();
     }
 
     render(){

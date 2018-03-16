@@ -1,0 +1,46 @@
+/**Import global variables using import**/
+@import url('../../cssGlobals/colors.css');
+
+/**use global variables like below**/
+body{
+    color: var(--primary-color);
+    font-family: "Helvetica";
+    background: var(--primary-background)
+}
+
+.minerStatsTop {
+    display: flex;
+    flex-direction: row;
+}
+
+.minerStatsBottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.minerInfo {
+    color: var(--header-color);
+    background-color: var(--orange-background);
+    height: 150px;
+    width: 33%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.transactions {
+    width: calc(60% - 20px);
+    margin: 10px;
+    background-color: var(--orange-background);
+    height: 500px;
+    color: var(--black-color);
+    padding: 5px;
+}
+
+.payouts {
+    width: calc(40% - 20px);
+    margin: 10px;
+    background-color: var(--orange-background);
+    height: 500px;
+    color: var(--black-color);
+    padding: 5px;
+}
