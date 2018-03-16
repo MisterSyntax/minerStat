@@ -7,7 +7,6 @@ const App = () => {
 
     return (
         <div id="app">
-            <p className={styles.tester}> Test </p>
             <Home />
         </div>
     );

@@ -2,14 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchRavenPayments } from './actions';
 import { WorkerStats } from '../WorkerStats/WorkerStats';
+import { NavBar } from '../NavBar/NavBar';
+import { WorkerInput } from '../WorkerInput/WorkerInput';
 
 class Home extends React.Component {
     componentWillMount(){
-        this.props.onFetchRavenPayments('123');
+        this.props.onFetchRavenPayments();
     }
     render() {
         return (
             <main>
+                <NavBar />
+                <WorkerInput />
                 <WorkerStats />
             </main>
         );
