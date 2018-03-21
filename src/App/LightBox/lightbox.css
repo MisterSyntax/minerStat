@@ -1,0 +1,25 @@
+@import url('../../cssGlobals/colors.css');
+
+#light-box{
+    background-color: var(--almost-white);
+    border-radius: 10px;
+    left: 50%;
+    min-width: 400px;
+    min-height: 400px;
+    padding: 10px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 2;
+}
+
+#light-box-bg{
+    background-color: var(--dark-grey);
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
