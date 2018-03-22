@@ -43,7 +43,6 @@ export const fetchMinerStats = (walletId = 'RJ7thg5raYjDUkt9Z2E23DdRMFHjZhVPzv')
         return fetch(`http://mine.threeeyed.info/api/worker_stats?${walletId}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 dispatch(loadMinerStatsSuccess(data));
             })
             .catch(error => loadMinerStatsFail(error));

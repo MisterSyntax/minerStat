@@ -2,12 +2,10 @@ import { connect } from 'react-redux';
 import { Transactions } from './Transactions';
 
 export const mapStateToProps = (state) => {
-    const { paymentData } = state.apiData.minerData;
-    if(!state.apiData.isLoaded){
-        return {};
-    }
+    console.log(state);
+    const { payments } = state.responseData;
     return ({
-        paymentData
+        payments
     });
 };
 

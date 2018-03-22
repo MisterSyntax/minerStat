@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MinerInfo.css';
 
-export const MinerInfo = () => {
+export const MinerInfo = (state) => {
+    console.log(state);
     return (
         <div className={styles.minerinfo}>
             Miner Information
