@@ -3,6 +3,8 @@
 
 .main {
     background-color: orange;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 75px;
+    color: white;
+    margin: 0 10px;
 }
