@@ -1,28 +1,47 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styles from './lightbox.css';
+import {
+    getIsLightBoxClosed,
+    getLightBoxContent,
+} from './viewState';
+import { closeLightBox } from './actions';
 
-const LightBox = (props) => {
-    if(props.hideOverlay) {
+const LightBox = ({
+    closeLightBox,
+    content,
+    isClosed,
+}) => {
+    if(isClosed) {
         return null;
     }
 
     return (
         <Fragment>
-            <div id={styles['light-box-bg']}/>
+            <div id={styles['light-box-bg']} onClick={closeLightBox}/>
             <div id={styles['light-box']}>
-                CONTENT!
+                ${content}
             </div>
         </Fragment>);
 };
 
 LightBox.propTypes = {
-    hideOverlay: PropTypes.bool,
+    closeLightBox: PropTypes.func.isRequired,
+    isClosed: PropTypes.bool,
 };
 
-// TODO: Kill this once we have a selector to get the state of the of the LightBox
 LightBox.defaultProps = {
-    hideOverlay: true,
+    isClosed: true,
 };
 
-export default LightBox;
+const mapStateToProps = state => ({
+    content: getLightBoxContent(state),
+    isClosed: getIsLightBoxClosed(state)
+});
+
+const mapDispatchToProps = {
+    closeLightBox,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LightBox);

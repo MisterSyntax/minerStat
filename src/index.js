@@ -18,6 +18,7 @@ const saveState = () =>
 
 const mainReducer = combineReducers({
     responseData,
+    viewState,
     userData,
 });
 
