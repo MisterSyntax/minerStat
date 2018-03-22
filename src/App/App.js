@@ -1,15 +1,32 @@
 import React from 'react';
-import styles from './App.css';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Home from './Home/Home';
+import { fetchRavenPayments } from './apiRequests/actions';
+import { setWalletId } from './actions';
 
-const App = () => {
+class App extends React.Component {
+    componentWillMount(){
+        this.props.setWalletId();
+        this.props.fetchRavenPayments();
+        /* Fetch all data here? I like this idea, because if we already have the wallet, we can do all of our fectches in one place*/
+    }
+    render() {
+        return (
+          <div id="app">
+              <Home />
+          </div>
+        );
+    }
+}
 
-
-    return (
-        <div id="app">
-            <Home />
-        </div>
-    );
+App.propTypes = {
+    fetchRavenPayments: PropTypes.func,
 };
 
-export default App;
+const mapDispatchToProps = {
+    fetchRavenPayments: walletId => fetchRavenPayments(walletId),
+    setWalletId,
+};
+
+export default connect(null, mapDispatchToProps)(App);
