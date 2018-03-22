@@ -1,6 +1,27 @@
 @import url('../../cssGlobals/colors.css');
 
-.transactons {
+.transactions {
     height: 100%;
     width: 100%;
+    overflow: scroll;
+    padding: 5px;
+}
+
+.headers {
+    display: flex;
+    flex-direction: row;
+}
+
+.column1 {
+    width: 20%;
+}
+.column2 {
+    width: 20%;
+}
+.column3 {
+    width: 40%;
+}
+.column4 {
+    width: 19%;
+    text-align: right;
 }
