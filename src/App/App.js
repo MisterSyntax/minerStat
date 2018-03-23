@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Home from './Home/Home';
+import LightBox from './LightBox/LightBox';
 import { fetchRavenPayments } from './apiRequests/actions';
 import { setWalletId } from './actions';
 
@@ -14,6 +15,7 @@ class App extends React.Component {
     render() {
         return (
           <div id="app">
+              <LightBox />
               <Home />
           </div>
         );
