@@ -11,7 +11,7 @@ export const fetchRavenPayments = (walletId = 'RLTCoLEnrDwwupR3pSgKWy7NJ9E1t9TYC
           .then(data => {
               dispatch(loadRavenPaymentsSuccess(data[0]));
           })
-          .catch(error => loadRavenPaymentsFail(error));
+          .catch(error => dispatch(loadRavenPaymentsFail(error)));
     };
 };
 

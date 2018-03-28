@@ -28,7 +28,8 @@ const store = createStore(
     applyMiddleware(thunk),
 );
 
-store.subscribe(saveState);
+//TODO: Fix so we can save localy
+//store.subscribe(saveState);
 
 //Renders your app, wrapped in a provider, for hooking up your store to the app
 render(
