@@ -2,24 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-    openLightBox,
-    closeLightBox,
-} from '../LightBox/actions';
+    openPayoutLightBox
+} from './actions';
 
-export const Payout = ({ openLightBox, payment }) => (
-    <div onClick={()=>openLightBox(payment.txid)} >
+export const Payout = ({ openPayoutLightBox, payment }) => (
+    <div onClick={()=>openPayoutLightBox(payment.txid)} >
       ${payment.txid}
     </div>
 );
 
 Payout.propTypes = {
     payment: PropTypes.object,
-    openLightBox: PropTypes.func,
+    openPayoutLightBox: PropTypes.func,
 };
 
 const mapDispatchToProps = {
-    closeLightBox,
-    openLightBox,
+    openPayoutLightBox,
 };
 
 export default connect(null, mapDispatchToProps)(Payout);
