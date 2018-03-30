@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Home from './Home/Home';
 import { fetchRavenPayments, fetchMinerStats } from './apiRequests/actions';
+import LightBox from './LightBox/LightBox';
 import { setWalletId } from './actions';
 
 class App extends React.Component {
@@ -14,9 +15,10 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div id="app">
-                <Home />
-            </div>
+          <div id="app">
+              <LightBox />
+              <Home />
+          </div>
         );
     }
 }

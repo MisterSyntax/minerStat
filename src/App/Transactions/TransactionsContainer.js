@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { Transactions } from './Transactions';
 
 export const mapStateToProps = (state) => {
-    console.log(state);
     const { payments } = state.responseData;
     return ({
         payments

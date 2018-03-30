@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import styles from './Transactions.css';
-import data from '../../../test/api.js';
+// import data from '../../../test/api.js';
 
 export const Transactions = () => {
-    const { payments } = data;
+    // const { payments } = data;
     return (
         <div className={styles.transactions}>
             <div className={styles.title}>
@@ -25,7 +25,7 @@ export const Transactions = () => {
                     Total Paid
                 </div>
             </div>
-            {payments.map(payment => {
+            {/* {payments.map(payment => {
                 const { time, miners, paid, blocks } = payment;
                 return (
                     <div className={styles.headers}>
@@ -43,7 +43,7 @@ export const Transactions = () => {
                         </div>
                     </div>
                 )
-            })}
+            })} */}
         </div>
     );
 };

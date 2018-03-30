@@ -1,8 +1,6 @@
 import deep from 'deep-get-set';
-import { combineReducers } from 'redux';
 import { SET_WALLET_ID } from './actions.js';
 import { createSelector } from 'reselect';
-
 
 export const userDataReducer = (state = {}, action) => {
     switch (action.type) {

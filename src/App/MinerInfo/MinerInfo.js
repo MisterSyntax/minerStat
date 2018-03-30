@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MinerInfo.css';
 
-export const MinerInfo = (state) => {
-    console.log(state);
+export const MinerInfo = ({
+    minerStats
+}) => {
+    console.log(minerStats);
     return (
         <div className={styles.minerinfo}>
             Miner Information
@@ -14,7 +16,6 @@ export const MinerInfo = (state) => {
 export default MinerInfo;
 
 MinerInfo.propTypes = {
-    title: PropTypes.string,
-    data: PropTypes.shape(),
+    minerStats: PropTypes.shape()
 };
 
